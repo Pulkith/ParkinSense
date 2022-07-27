@@ -1,0 +1,105 @@
+
+<script>document.getElementById("errorCreds").style.display = "none"</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Runners Volunteer Login</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="loginstyle.css">
+
+    <!-- JS 
+    <script type="text/javascript" src="JS/Main.js"></script>-->
+
+    <!-- Login JS -->
+    <script>
+        function showMessage(info) {
+            var result = "";
+            var result2 = "";
+            if (info.length > 0) {
+                document.getElementById("seperator").innerHTML = "<br>";
+                document.getElementById("errorCreds").style.display = "block"
+                document.getElementById("ID").value = "";
+            } else if (result.length > 0) {
+                document.getElementById("seperator").innerHTML = "<br>";
+                document.getElementById("errorCreds").style.display = "block"
+                document.getElementById("ID").value = "";
+            }
+
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="main">
+
+        <h1>Sign In</h1>
+        <div class="container">
+            <div class="sign-up-content">
+                <for method="post" class="signup-form" action="">
+					<br><br>
+                    <img src="p-logo.png" class="img-fluid" alt="Parkin-Sense Logo">
+					<br><br>
+					<h3>Login or Sign Up below to continue to your diagnosis. </h3>
+
+                    <div class="alert" id="errorCreds" style="display:none">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        <strong>Whoops!</strong>                     </div>
+                    <div id="seperator"></div>
+                    <div class="form-textbox">
+                        <label for="name">Username </label>
+                        <input type="text" name="ID" id="ID" maxlength="6" />
+                    </div>
+                    <div class="form-textbox">
+                        <label for="pass">Password</label>
+                        <input type="password" name="password" id="password" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                        <label for="agree-term" class="label-agree-term"><span><span></span></span>Keep Me Logged In</label><br>
+                    </div>
+                    <!--Run the Error Message Check -->
+                    <script>
+                        showMessage("")
+                    </script>
+					<script>
+						function nextpage() {
+							setTimeout(function(){
+								window.location.href = "diagnose.html";
+						}, 500);//wait 2 seconds
+							return false;
+						}
+
+					</script>
+                    <div class="form-textbox">
+                        <input type="submit" name="submit" id="submit" class="submit" value="Log In" onclick="nextpage()"/>
+                    </div>
+                </form>
+                <p class='loginhere'>
+                    <a href="single-blog.html" class="loginhere-link"> Register Here </a> || <a href="ChangePassword?request=forgot_password&step=0" class="loginhere-link"> Forgot Password?</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+<foot>
+<script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+    </script>
+</script>
+</foot>
+
+</html>

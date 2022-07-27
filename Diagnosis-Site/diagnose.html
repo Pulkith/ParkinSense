@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>medical</title>
+	<link rel="icon" href="img/xfavicon.png.pagespeed.ic.szlTVr6AG5.webp">
+
+	<link rel="stylesheet"
+		href="css/A.bootstrap.min.css+animate.css+owl.carousel.min.css+themify-icons.css+flaticon.css+magnific-popup.css+nice-select.css+slick.css,Mcc.GccMcZ8GpM.css.pagespeed.cf.3lc3prZdou.css" />
+
+
+	<link rel="stylesheet" href="css/A.style.css.pagespeed.cf.256td9KHnu.css">
+	<script>
+		(function (w, d) {
+			! function (e, t, r, a, s) {
+				e[r] = e[r] || {}, e[r].executed = [], e.zaraz = {
+					deferred: []
+				};
+				var n = t.getElementsByTagName("title")[0];
+				e[r].c = t.cookie, n && (e[r].t = t.getElementsByTagName("title")[0].text), e[r].w = e.screen.width, e[r]
+					.h = e.screen.height, e[r].j = e.innerHeight, e[r].e = e.innerWidth, e[r].l = e.location.href, e[r]
+					.r = t.referrer, e[r].k = e.screen.colorDepth, e[r].n = t.characterSet, e[r].o = (new Date)
+					.getTimezoneOffset(), //
+					e[s] = e[s] || [], e.zaraz._preTrack = [], e.zaraz.track = (t, r) => e.zaraz._preTrack.push([t, r]),
+					e[s].push({
+						"zaraz.start": (new Date).getTime()
+					});
+				var i = t.getElementsByTagName(a)[0],
+					o = t.createElement(a);
+				o.defer = !0, o.src = "/cdn-cgi/zaraz/s.js?" + new URLSearchParams(e[r]).toString(), i.parentNode
+					.insertBefore(o, i)
+			}(w, d, "zarazData", "script", "dataLayer");
+		})(window, document);
+	</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/addons/p5.sound.min.js" type="text/javascript"></script>
+
+	<style>
+
+
+canvas {
+	  width: 300px;
+	  height: 200px;
+    }
+
+    #p5Div,
+    #threejsDiv {
+      position: absolute;
+      top: 0;
+	  width: 100px;
+    }
+
+    #p5Div {
+      z-index: 1;
+    }
+
+	#vid {
+		width: 760px;
+		height: 30%;
+	}
+
+	.dot-bricks {
+  position: relative;
+  top: 8px;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  box-shadow: 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff;
+  animation: dotBricks 2s infinite ease;
+}
+
+@keyframes dotBricks {
+  0% {
+    box-shadow: 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff;
+  }
+  8.333% {
+    box-shadow: 10007px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff;
+  }
+  16.667% {
+    box-shadow: 10007px -16px 0 0 #9880ff, 9991px -16px 0 0 #9880ff, 10007px 0 0 0 #9880ff;
+  }
+  25% {
+    box-shadow: 10007px -16px 0 0 #9880ff, 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff;
+  }
+  33.333% {
+    box-shadow: 10007px 0 0 0 #9880ff, 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff;
+  }
+  41.667% {
+    box-shadow: 10007px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff;
+  }
+  50% {
+    box-shadow: 10007px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff, 9991px -16px 0 0 #9880ff;
+  }
+  58.333% {
+    box-shadow: 9991px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff, 9991px -16px 0 0 #9880ff;
+  }
+  66.666% {
+    box-shadow: 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff, 9991px -16px 0 0 #9880ff;
+  }
+  75% {
+    box-shadow: 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff;
+  }
+  83.333% {
+    box-shadow: 9991px -16px 0 0 #9880ff, 10007px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff;
+  }
+  91.667% {
+    box-shadow: 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff;
+  }
+  100% {
+    box-shadow: 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff;
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Spin
+ * ==============================================
+ */
+ .dot-spin {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: transparent;
+  box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 0 rgba(152, 128, 255, 0), 0 18px 0 0 rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 0 rgba(152, 128, 255, 0), -18px 0 0 0 rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 0 rgba(152, 128, 255, 0);
+  animation: dotSpin 1.5s infinite linear;
+}
+
+@keyframes dotSpin {
+  0%,
+  100% {
+    box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  12.5% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 0 #9880ff, 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  25% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 0 #9880ff, 0 18px 0 0 #9880ff, -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  37.5% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 0 #9880ff, 0 18px 0 0 #9880ff, -12.72984px 12.72984px 0 0 #9880ff, -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  50% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 0 #9880ff, -12.72984px 12.72984px 0 0 #9880ff, -18px 0 0 0 #9880ff, -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  62.5% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 0 #9880ff, -18px 0 0 0 #9880ff, -12.72984px -12.72984px 0 0 #9880ff;
+  }
+  75% {
+    box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 0 #9880ff, -12.72984px -12.72984px 0 0 #9880ff;
+  }
+  87.5% {
+    box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 0 #9880ff;
+  }
+}
+
+	</style>
+</head>
+
+<body>
+
+	<header class="main_menu">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-12">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<a class="navbar-brand" href="index.html">
+							<script data-pagespeed-no-defer>
+								//<![CDATA[
+								(function () {
+									for (var g = "function" == typeof Object.defineProperties ? Object.defineProperty : function (b, c, a) {
+												if (a.get || a.set) throw new TypeError("ES3 does not support getters and setters.");
+												b != Array.prototype && b != Object.prototype && (b[c] = a.value)
+											}, h = "undefined" != typeof window && window === this ? this : "undefined" != typeof global &&
+											null != global ? global : this, k = ["String", "prototype", "repeat"], l = 0; l < k.length -
+										1; l++) {
+										var m = k[l];
+										m in h || (h[m] = {});
+										h = h[m]
+									}
+									var n = k[k.length - 1],
+										p = h[n],
+										q = p ? p : function (b) {
+											var c;
+											if (null == this) throw new TypeError(
+												"The 'this' value for String.prototype.repeat must not be null or undefined");
+											c = this + "";
+											if (0 > b || 1342177279 < b) throw new RangeError("Invalid count value");
+											b |= 0;
+											for (var a = ""; b;)
+												if (b & 1 && (a += c), b >>>= 1) c += c;
+											return a
+										};
+									q != p && null != q && g(h, n, {
+										configurable: !0,
+										writable: !0,
+										value: q
+									});
+									var t = this;
+
+									function u(b, c) {
+										var a = b.split("."),
+											d = t;
+										a[0] in d || !d.execScript || d.execScript("var " + a[0]);
+										for (var e; a.length && (e = a.shift());) a.length || void 0 === c ? d[e] ? d = d[e] : d = d[
+											e] = {} : d[e] = c
+									};
+
+									function v(b) {
+										var c = b.length;
+										if (0 < c) {
+											for (var a = Array(c), d = 0; d < c; d++) a[d] = b[d];
+											return a
+										}
+										return []
+									};
+
+									function w(b) {
+										var c = window;
+										if (c.addEventListener) c.addEventListener("load", b, !1);
+										else if (c.attachEvent) c.attachEvent("onload", b);
+										else {
+											var a = c.onload;
+											c.onload = function () {
+												b.call(this);
+												a && a.call(this)
+											}
+										}
+									};
+									var x;
+
+									function y(b, c, a, d, e) {
+										this.h = b;
+										this.j = c;
+										this.l = a;
+										this.f = e;
+										this.g = {
+											height: window.innerHeight || document.documentElement.clientHeight || document.body
+												.clientHeight,
+											width: window.innerWidth || document.documentElement.clientWidth || document.body
+												.clientWidth
+										};
+										this.i = d;
+										this.b = {};
+										this.a = [];
+										this.c = {}
+									}
+
+									function z(b, c) {
+										var a, d, e = c.getAttribute("data-pagespeed-url-hash");
+										if (a = e && !(e in b.c))
+											if (0 >= c.offsetWidth && 0 >= c.offsetHeight) a = !1;
+											else {
+												d = c.getBoundingClientRect();
+												var f = document.body;
+												a = d.top + ("pageYOffset" in window ? window.pageYOffset : (document.documentElement || f
+													.parentNode || f).scrollTop);
+												d = d.left + ("pageXOffset" in window ? window.pageXOffset : (document.documentElement || f
+													.parentNode || f).scrollLeft);
+												f = a.toString() + "," + d;
+												b.b.hasOwnProperty(f) ? a = !1 : (b.b[f] = !0, a = a <= b.g.height && d <= b.g.width)
+											} a && (b.a.push(e),
+											b.c[e] = !0)
+									}
+									y.prototype.checkImageForCriticality = function (b) {
+										b.getBoundingClientRect && z(this, b)
+									};
+									u("pagespeed.CriticalImages.checkImageForCriticality", function (b) {
+										x.checkImageForCriticality(b)
+									});
+									u("pagespeed.CriticalImages.checkCriticalImages", function () {
+										A(x)
+									});
+
+									function A(b) {
+										b.b = {};
+										for (var c = ["IMG", "INPUT"], a = [], d = 0; d < c.length; ++d) a = a.concat(v(document
+											.getElementsByTagName(c[d])));
+										if (a.length && a[0].getBoundingClientRect) {
+											for (d = 0; c = a[d]; ++d) z(b, c);
+											a = "oh=" + b.l;
+											b.f && (a += "&n=" + b.f);
+											if (c = !!b.a.length)
+												for (a += "&ci=" + encodeURIComponent(b.a[0]), d = 1; d < b.a.length; ++d) {
+													var e = "," + encodeURIComponent(b.a[d]);
+													131072 >= a.length + e.length && (a += e)
+												}
+											b.i && (e = "&rd=" + encodeURIComponent(JSON.stringify(B())), 131072 >= a.length + e.length && (
+												a += e), c = !0);
+											C = a;
+											if (c) {
+												d = b.h;
+												b = b.j;
+												var f;
+												if (window.XMLHttpRequest) f =
+													new XMLHttpRequest;
+												else if (window.ActiveXObject) try {
+													f = new ActiveXObject("Msxml2.XMLHTTP")
+												} catch (r) {
+													try {
+														f = new ActiveXObject("Microsoft.XMLHTTP")
+													} catch (D) {}
+												}
+												f && (f.open("POST", d + (-1 == d.indexOf("?") ? "?" : "&") + "url=" + encodeURIComponent(
+														b)), f.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"), f
+													.send(a))
+											}
+										}
+									}
+
+									function B() {
+										var b = {},
+											c;
+										c = document.getElementsByTagName("IMG");
+										if (!c.length) return {};
+										var a = c[0];
+										if (!("naturalWidth" in a && "naturalHeight" in a)) return {};
+										for (var d = 0; a = c[d]; ++d) {
+											var e = a.getAttribute("data-pagespeed-url-hash");
+											e && (!(e in b) && 0 < a.width && 0 < a.height && 0 < a.naturalWidth && 0 < a.naturalHeight ||
+												e in b && a.width >= b[e].o && a.height >= b[e].m) && (b[e] = {
+												rw: a.width,
+												rh: a.height,
+												ow: a.naturalWidth,
+												oh: a.naturalHeight
+											})
+										}
+										return b
+									}
+									var C = "";
+									u("pagespeed.CriticalImages.getBeaconData", function () {
+										return C
+									});
+									u("pagespeed.CriticalImages.Run", function (b, c, a, d, e, f) {
+										var r = new y(b, c, a, e, f);
+										x = r;
+										d && w(function () {
+											window.setTimeout(function () {
+												A(r)
+											}, 0)
+										})
+									});
+								})();
+
+								pagespeed.CriticalImages.Run('/mod_pagespeed_beacon',
+									'https://preview.colorlib.com/theme/medisen/single-blog.html', '-ilGEe-FWC', true, false, '-wHw6yv84Vw');
+								//]]>
+							</script> <img style='margin-left: -250px;' src="p-logo.png" alt="logo" data-pagespeed-url-hash="484555257"
+                onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse"
+							data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+							aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse main-menu-item justify-content-end" id="navbarSupportedContent" style='margin-left: 0;'>
+							<ul class="navbar-nav align-items-center">
+							  <li class="nav-item active">
+								<a class="nav-link" href="index.html">Home</a>
+							  </li>
+							  <li class="nav-item">
+								<a class="nav-link" href="">About</a>
+							  </li>
+							  <li class="nav-item">
+								<a class="nav-link" href="">Diagnosis</a>
+							  </li>
+							  <li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button"
+								  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								  Donate
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								  <!-- <a class="dropdown-item" href="services.html">services</a> -->
+								  <!-- <a class="dropdown-item" href="elements.html">Elements</a> -->
+								</div>
+							  </li>
+							  <li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1" role="button"
+								  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								  blog
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+								  <!-- <a class="dropdown-item" href="blog.html">blog</a> -->
+								  <!-- <a class="dropdown-item" href="single-blog.html">Single blog</a> -->
+								</div>
+							  </li>
+							  <li class="nav-item">
+								<a class="nav-link" href="">Contact</a>
+							  </li>
+							  <li class="d-none d-lg-block">
+								<a class="btn_1" href="#" style='width: 150px;'>View Profile</a>
+							  </li>
+							</ul>
+						  </div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<section class="breadcrumb breadcrumb_bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="breadcrumb_iner">
+						<div class="breadcrumb_iner_item">
+							<h2>Get Diagnosed</h2>
+							<p>Home<span>/</span>Get Diagnosed</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="blog_area single-post-area section_padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 posts-list">
+					<div class="single-post">
+						<div class="feature-img">
+							<img class="img-fluid" src="img/blog/xsingle_blog_1.png.pagespeed.ic.Vb11bfvxZv.webp" alt=""
+								data-pagespeed-url-hash="4149661996"
+								onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+						</div>
+						<div class="blog_details" id="before-details">
+							<h2>Before you start!
+							</h2>
+							<p class="excert">
+								Make sure you are hydrated, well-rested, and in a quiet spot before you take this
+								diagnosis.
+
+								You will be asked to read a few paragraphs of text out loud for a minute. This text is
+								randomly generated. Be sure to read
+								in your normal voice as if you are speaking to a pearson a couple of feet from you. Make
+								sure your entire face, especially your eyes, is visible in the camera frame the entire
+								time.
+							</p>
+
+							<div id="instruts">
+								<h6>When you are ready to begin, press the button below.</h6>
+
+							
+								<button class="button rounded-0 primary-bg text-white w-100 btn_1" onclick="begin()" id="beginbtn">Begin
+									Diagnosis</button>
+							</div>
+							
+
+
+							<div class="quote-wrapper">
+								<div class="quotes">
+									<p id="text-wrapper">
+										When you begin diagnosis. The text will appear here. Simply keep reading until the text dissapears. Your video and audio will always be in the sidebar for your reference.
+									</p>
+								</div>
+							</div>
+
+							
+							<div id="largedata">
+								<h4>Make sure your camera can see your face, and that your microphone is picking up audio below.</h4>
+								<canvas id="vid"></canvas>
+								<script src="facemodel.js"></script>
+								<!-- <button id="clickstart">HELLO</button> -->
+								<script> 
+									detect();
+
+									function starter() {
+										getAudioContext().resume();
+									}
+									document.getElementById("clickstart").addEventListener("click", starter)
+								</script>
+									
+
+								<!-- <script src="voicemodel.js"></script> -->
+								<!-- <script src="webgazer.js" type="text/javascript" ></script> -->
+								<!-- <img src="https://miro.medium.com/max/2386/1*qV5DHp3nR54FlqhdKPtugQ.gif" /> -->
+								<!-- <canvas id="audio_visual"></canvas> -->
+
+								<div id='p5Div'></div>
+								<div id='threejsDiv'></div>
+								<div id='audio'></div>
+								<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js" type="text/javascript"></script>
+							
+								<script src="voicemodel.js" type="text/javascript"></script>
+							</div>
+						
+						</div>
+						
+						<div class="blog_details" id="after-details" style = 'display: none;'>
+							<div class="row">
+								<div class="col-3" style='padding-top: 30px; padding-right: 20px;'>
+									<div class="snippet" data-title=".dot-spin">
+									  <div class="stage">
+										<div class="dot-spin"></div>
+									  </div>
+									</div>
+								  </div>
+								  <div class="col-3">
+									&nbsp;&nbsp; <span style='
+									font-size: 3.5em;
+									margin-left: 0;
+									margin-right: 0;
+									margin-bottom: 5px;
+									padding-top: -50px;
+									font-weight: bold;'>Predicting	</span>
+									
+						
+							</div>
+
+								  
+								  
+							</div>	
+							
+
+							<p class="excert">
+								Congratulations! You have finished the test.
+							</p>
+
+							<p class="excert">
+								Parkin-Sense is now predicting your chance of having Parkinson's Disease. This may take several minutes (up to 5). Do not close or reload this page. It 
+								will automatically update when the results are calculated.
+							</p>
+
+							<div id="instruts">
+								<h6>If you would like the cancel your results, or restart the diagnosis, press the button below. This action cannot be undone!</h6>
+
+							
+								<button class="button rounded-0 primary-bg text-white w-100 btn_1" onclick="begin()" id="beginbtn">Restart Diagnosis</button>
+							</div>
+
+						</div>
+									
+						<div class="blog_details" id="result-details" style='display: none;'>
+								  <div class="col-3">
+									<span style='
+									font-size: 3.5em;
+									margin-left: 0;
+									margin-right: 0;
+									font-weight: bold;'>Results	</span>
+								</div>	
+							
+														
+
+								<p>
+									The results of the test have been calculated. You can view them below.
+								</p>
+
+
+
+							<p class="excert">
+								Disclaimer: These results should not be used for medication or treatment purposes. It only provides a prediction and advice about wether or not you should seek a professional medical diagnosis.
+							</p>
+
+							<p>
+								<h3>Parkinson's Disease: <span style='color: green'><strong>NEGATIVE</strong></span></h3>
+								<h3>Diagnosis Confidence: <span style='color: green'><strong id="overallrate">96.312</strong><strong>%</strong></span></h3>
+								<br>
+
+								<h2>Individiual Symptoms Diagnosis Results</h2>
+								<h3>Eye diagnosis & confidence: <span style='color: green'><strong>NEGATIVE</strong></span> | <span style='color: green'><strong id="eyerate">91.830</strong><strong>%</strong></span></h3>
+								<h3>Face diagnosis & confidence: <span style='color: green'><strong>NEGATIVE</strong></span> | <span style='color: green'><strong id="facerate">99.188</strong><strong>%</strong></span></h3>
+								<h3>Vocal diagnosis & confidence: <span style='color: green'><strong>NEGATIVE</strong></span> | <span style='color: green'><strong id="vocalrate">89.360</strong><strong>%</strong></span></h3>
+
+							</p><br><br><br>
+
+							<h4>Download</h4>
+							<p>You can download the results below if you would like to save them. Unless you download your results, they will be lost when you navigate away from this page.</p>
+							<button class="button rounded-0 primary-bg text-white w-100 btn_1" onclick="begin()" id="beginbtn">Download Results</button>
+							<br><br>
+							<h4>Submit Data</h4>
+							<p>We encourage you to submit your data and results to Parkin-Sense! This will let us train the service with this data so it become more accurate in the future! We will never reveal your data to anyone outside of Parkin-Sense. For more information, read <a style='color: blue' href="#"><u>here</u></a></p>
+							<button class="button rounded-0 primary-bg text-white w-100 btn_1" onclick="begin()" id="beginbtn">Submit Data & Results</button>
+							<br><br>
+							<div id="instruts">
+								<h4>Repeat</h4>
+								<h6>If you would like to repeat the test, click the button below. This will get rid of your above diagnosis results. If you would like to save your results, download them above.</h6>
+
+							
+								<button class="button rounded-0 primary-bg text-white w-100 btn_1" onclick="begin()" id="beginbtn">Repeat Diagnosis</button>
+							</div>
+
+						</div>
+
+
+
+
+					</div>
+					<div class="navigation-top">
+						<div class="d-sm-flex justify-content-between text-center">
+
+							<div class="col-sm-4 text-center my-2 my-sm-0">
+
+							</div>
+							<ul class="social-icons">
+								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fab fa-behance"></i></a></li>
+							</ul>
+						</div>
+						<div class="navigation-area">
+							<div class="row">
+								<div
+									class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+									<div class="thumb">
+										<a href="#">
+											<img class="img-fluid" src="img/post/preview.png" alt=""
+												data-pagespeed-url-hash="2338053943"
+												onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+										</a>
+									</div>
+									<div class="arrow">
+										<a href="#">
+											<span class="lnr text-white ti-arrow-left"></span>
+										</a>
+									</div>
+									<div class="detials">
+
+
+
+										</a>
+									</div>
+								</div>
+								<div
+									class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+									<div class="detials">
+
+										</a>
+									</div>
+									<div class="arrow">
+										<a href="#">
+
+										</a>
+									</div>
+									<div class="thumb">
+										<a href="#">
+											<img class="img-fluid" src="img/post/next.png" alt=""
+												data-pagespeed-url-hash="2554726710"
+												onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<div class="col-lg-4" id="sidebar">
+					<div class="blog_right_sidebar">
+						<aside >
+							<form action="#">
+								<!-- <div class="form-group">
+									<div class="input-group mb-3">
+										<input type="text" class="form-control" placeholder='Search Keyword'
+											onfocus="this.placeholder = ''"
+											onblur="this.placeholder = 'Search Keyword'">
+										<div class="input-group-append">
+											<button class="btn" type="button"><i class="ti-search"></i></button>
+										</div>
+									</div>
+								</div>
+								<button class="button rounded-0 primary-bg text-white w-100 btn_1"
+									type="submit">Search</button> -->
+							</form>
+							<br><br><br><br><br>	<br><br><br><br><br><br><br><br><br><br>
+						</aside>
+						<aside class="single_sidebar_widget post_category_widget" style='display: none;' id="sidebarinfo">
+							<h4 class="widget_title">Status</h4>
+							<h3 id="clock">Time Remaining: <span id="time">60</span> <span style="font-size: 20px"> seconds</span></h3><br>
+							<canvas id="vid2"></canvas>
+							<script>
+								detect2();
+							</script>
+							<div id='audio2' style='width: 100%;  overflow: hidden;'></div>
+							<script src="voicemodel2.js"></script>
+							<script>
+								beginaudio2();
+							</script>
+
+<button class="button rounded-0 primary-bg text-white w-100 btn_1">Abort
+	Diagnosis</button>
+
+						</aside>
+						<!-- <aside class="single_sidebar_widget popular_post_widget">
+							<h3 class="widget_title">Recent Post</h3>
+							<div class="media post_item">
+								<img src="data:image/webp;base64,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"
+									alt="post" data-pagespeed-url-hash="3323883541"
+									onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+								<div class="media-body">
+									<a href="single-blog.html">
+										<h3>From life was you fish...</h3>
+									</a>
+									<p>January 12, 2019</p>
+								</div>
+							</div>
+							<div class="media post_item">
+								<img src="data:image/webp;base64,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"
+									alt="post" data-pagespeed-url-hash="3618383462"
+									onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+								<div class="media-body">
+									<a href="single-blog.html">
+										<h3>The Amazing Hubble</h3>
+									</a>
+									<p>02 Hours ago</p>
+								</div>
+							</div>
+							<div class="media post_item">
+								<img src="data:image/webp;base64,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"
+									alt="post" data-pagespeed-url-hash="3912883383"
+									onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+								<div class="media-body">
+									<a href="single-blog.html">
+										<h3>Astronomy Or Astrology</h3>
+									</a>
+									<p>03 Hours ago</p>
+								</div>
+							</div>
+							<div class="media post_item">
+								<img src="data:image/webp;base64,UklGRrgFAABXRUJQVlA4IKwFAAAwGQCdASpQAFAAPm0wk0ckIqGhrNM6qIANiWYAxQvaij/Qebbau7OGS7ZJ0fmAf4voj+Kr1QN5u9BTpc/3IoYO1woBd2cAcx9hjptv1nnctB3eRJ+LP+30F/oaksLh/zi3pf92k3mNDlJJ9v+2JfjvDIxGAaCN/E9Ec236gupAl43fIL1FJFAh3D7iuO+Acx183is9bHLPwWpxufLFlW2VC1zUefu6sXScMmdpt2l0qPcMf7lHGUK1qhMvjaWnNWpj0yAUODdHQ7bf1/uSwxR9lAAA7KJz1LuJqPZaE1eXwhVaGLUpwLEVet9a5of/XFKljibn/oM4z49wPmc5Yy7+4Y7DhmsTxP3PKQhXXRqktaFNBbdbeLhZS3VeEAI9HOpUh6r3k6xBBzKfljpw2xbIQRxeF/GC2fKllCqssujoNVhS4samc7RZwZA9slekaCcgAYlHzFemHFwMZD/WrofrPj7jmucWEGe4ItS7JieS6vDy3xtIk5d5Ov/FEEbUzXyuCJiGkbgDIgVyCdqe77YXud0WJc08PfwCMkaMqgc98MMgrMTwn6c2EXLlob95n3boDrC+FiPhtFJMDsPnsWjiPqC8PO/gkgRgb/SZps+yMB7C3tCtKHno5T7OtcLmELtv/RhzVTF1r2JfO+qShX/VCKVmOoQOyMSz9iWfXDeVchZqKsWWvXyW8PH39u5ePPq62Vov36mTAMBxtMKSGS3ZQDR0jjfPcWXGczD+1aZzCNM+cdXMTrx7ucvonUXE3OmVEWo4XXROWKluIpD+oriqs7C2Pg/3ioo7Jvu4sMgrvtyGqH98k3K9JlOz0d7kMHcAFiRXiLH6z4eigkR4u5uprz90740j6OW6sOZoRbuD+9cu6zpSXu59tkz8Bxv168LaUZsQ3zQkv5pHyRuDrukdnvgBtFbAGEKOjwocJf0lEwDbHMKUqscdTJm6yjh+Zh+VPUThWegjMm6pp5yczrhYqAs8r2T6dDjn8//pWI959IsUzbP0PYOWT1w8Ro/JP996sH5U2hsV17Gp1hM4j8In38WlxRsqksK3Q92riJcHHFtI+/38n6LFY6Hsw2tyaqWqYjWZVA7JTEsG8cFzmnj+N91A+hfOxXt7f4CIBXGgAL9pkC+47yDmmG3mXXgUIq0RZFuefpMDrJg3EfFTe+RgXjTUw68BUEjeji0Hj9XQciRa/6lyTLCmQGgEy2ReWFXxPZom48iqjA6/RTcsqkl0l0ZP1UKHO0D8Uqc6Rko0lEi/giNz2xGG/M5rX6K0OmbdLmxic9qYozJ4eA5Hr9xp/Q7+nv4Ow+CJbu7907YHaf6uyxh2dOvq6mvfvz1CA7A5LpxMP/75CHv7vC1KkhjFapOkaFn279Xt+JCNF1wAA/9OZZcwNTiPfv3u9Ysbhi9rACLHZDs98jLpU40NyxiASBwPKW1CUuf+LUjuKun9itpASMmKrS8u/FCIgtUsH96sOpkkhLoJpMn80BjDkuP2bJ92e/I/xI/Yaju0aPrPoZ7ne5nfxlzUNlIJ0pJFO1Cr2piDpAlrxscPT+fGvDprzpA8IG3PxvbWXEiJlowWj3jgyp083WjBRL5XCZEpma91xu1tZr5UIwktqdELfrATZjOfLnXOJhifCM1GSumUEyfygV7UGeUAnNjXhSK5EV2NpPM95Hddvu4R1hbGL/TvghsVoKtlQm3DLppPPPmuhafUpq6vdhpG9YwZqQVV3K9n9kBEC9Io5wPwISXA6CgbwQTRho48zvGTSaLcbA9TGqsSIFCcXyzd2DGu04z2anVQD2SmH0cknl7Q81yvBQ9DYkoEl3nO7Q2axcPvSbhhHg6woH8+Ll808/23jZyFwiD9ytedUm3WpgICkgGYAoZ90kqb95sEW8Xce/REEXj6AKLcu6vYRJIz90MKz530Rd+5/+BKva+uH63AAAA="
+									alt="post" data-pagespeed-url-hash="4207383304"
+									onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+								<div class="media-body">
+									<a href="single-blog.html">
+										<h3>Asteroids telescope</h3>
+									</a>
+									<p>01 Hours ago</p>
+								</div>
+							</div>
+						</aside>
+						<aside class="single_sidebar_widget tag_cloud_widget">
+							<h4 class="widget_title">Tag Clouds</h4>
+							<ul class="list">
+								<li>
+									<a href="#">project</a>
+								</li>
+								<li>
+									<a href="#">love</a>
+								</li>
+								<li>
+									<a href="#">technology</a>
+								</li>
+								<li>
+									<a href="#">travel</a>
+								</li>
+								<li>
+									<a href="#">restaurant</a>
+								</li>
+								<li>
+									<a href="#">life style</a>
+								</li>
+								<li>
+									<a href="#">design</a>
+								</li>
+								<li>
+									<a href="#">illustration</a>
+								</li>
+							</ul>
+						</aside>
+						<aside class="single_sidebar_widget instagram_feeds">
+							<h4 class="widget_title">Instagram Feeds</h4>
+							<ul class="instagram_row flex-wrap">
+								<li>
+									<a href="#">
+										<img class="img-fluid" src="img/post/xpost_5.png.pagespeed.ic.cL8lK-c9YT.webp"
+											alt="" data-pagespeed-url-hash="206915929"
+											onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img class="img-fluid"
+											src="data:image/webp;base64,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"
+											alt="" data-pagespeed-url-hash="501415850"
+											onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img class="img-fluid" src="img/post/post_7.png" alt=""
+											data-pagespeed-url-hash="795915771"
+											onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img class="img-fluid" src="img/post/post_8.png" alt=""
+											data-pagespeed-url-hash="1090415692"
+											onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img class="img-fluid" src="img/post/post_9.png" alt=""
+											data-pagespeed-url-hash="1384915613"
+											onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img class="img-fluid" src="img/post/post_10.png" alt=""
+											data-pagespeed-url-hash="2077708153"
+											onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+									</a>
+								</li>
+							</ul>
+						</aside>
+						<aside class="single_sidebar_widget newsletter_widget">
+							<h4 class="widget_title">Newsletter</h4>
+							<form action="#">
+								<div class="form-group">
+									<input type="email" class="form-control" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
+								</div>
+								<button class="button rounded-0 primary-bg text-white w-100 btn_1"
+									type="submit">Subscribe</button>
+							</form>
+						</aside> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer class="footer-area">
+		<div class="footer section_padding">
+		  <div class="container">
+			<div class="row">
+			  <div class="col-xl-2 col-sm-4 mb-4 mb-xl-0 single-footer-widget">
+				<h4>Services Link</h4>
+				<ul>
+				  <li><a href="#">Get Diagnosed</a></li>
+				  <li><a href="#">View Results</a></li>
+				  <li><a href="#">View Profile</a></li>
+				  <li><a href="#">Submit Results</a></li>
+				</ul>
+			  </div>
+			  <div class="col-xl-2 col-sm-4 mb-4 mb-xl-0 single-footer-widget">
+				<h4>Quick Links</h4>
+				<ul>
+				  <li><a href="#">About us</a></li>
+				  <li><a href="#">Diagnosis</a></li>
+				  <li><a href="#">Research</a></li>
+				  <li><a href="#">Department</a></li>
+				</ul>
+			  </div>
+			  <div class="col-xl-2 col-sm-4 mb-4 mb-xl-0 single-footer-widget">
+				<h4>Explore</h4>
+				<ul>
+				  <li><a href="#">In the community</a></li>
+				  <li><a href="#">Foundnation</a></li>
+				  <li><a href="#">Support </a></li>
+				</ul>
+			  </div>
+			  <div class="col-xl-2 col-sm-4 mb-4 mb-xl-0 single-footer-widget">
+				<h4>Resources</h4>
+				<ul>
+				  <li><a href="#">Guide</a></li>
+				  <li><a href="#">Project Statement</a></li>
+				  <li><a href="#">Recent Results</a></li>
+				  <li><a href="#">Blog</a></li>
+				</ul>
+			  </div>
+			  <div class="col-xl-4 col-sm-8 col-md-8 mb-4 mb-xl-0 single-footer-widget">
+				<h4>Newsletter</h4>
+				<p>Sign up for our newsletter</p>
+				<div class="form-wrap" id="mc_embed_signup">
+				  <form target="_blank"
+					action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+					class="form-inline">
+					<input class="form-control" name="EMAIL" placeholder="Your Email Address"
+					  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '" required
+					  type="email">
+					<button class="click-btn btn btn-default text-uppercase">subscribe</button>
+					<div style="position: absolute; left: -5000px;">
+					  <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+					</div>
+					<div class="info"></div>
+				  </form>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="copyright_part">
+		  <div class="container">
+			<div class="row align-items-center">
+			  <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
+				<a href="#"><i class="ti-facebook"></i></a>
+				<a href="#"> <i class="ti-twitter"></i> </a>
+				<a href="#"><i class="ti-instagram"></i></a>
+				<a href="#"><i class="ti-skype"></i></a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+	
+
+
+	<script src="js/jquery-1.12.1.min.js"></script>
+
+	<script src="js/popper.min.js+bootstrap.min.js.pagespeed.jc.7gcxwe0APG.js"></script>
+	<script>
+		eval(mod_pagespeed_Fo5vXP6i3K);
+	</script>
+
+	<script>
+		eval(mod_pagespeed_VXZM4BdlVt);
+	</script>
+
+	<script src="js/jquery.magnific-popup.js"></script>
+
+	<script src="js/swiper.min.js"></script>
+
+	<script src="js/masonry.pkgd.js"></script>
+
+	<script
+		src="js/owl.carousel.min.js+jquery.nice-select.min.js+slick.min.js+jquery.counterup.min.js+waypoints.min.js.pagespeed.jc.imaMzkSihR.js">
+	</script>
+	<script>
+		eval(mod_pagespeed_1Phr7HZ9FI);
+	</script>
+	<script>
+		eval(mod_pagespeed_NZz4b98wwU);
+	</script>
+
+	<script>
+		eval(mod_pagespeed_2E2jHCapX0);
+	</script>
+	<script>
+		eval(mod_pagespeed_zdhl7ri$T$);
+	</script>
+	<script>
+		eval(mod_pagespeed_QEpc2eNJbS);
+	</script>
+
+	<script
+		src="js/jquery.ajaxchimp.min.js+jquery.form.js+jquery.validate.min.js+mail-script.js+contact.js+custom.js.pagespeed.jc.RFKRBhHg8v.js">
+	</script>
+	<script>
+		eval(mod_pagespeed_mwulpnb6pk);
+	</script>
+	<script>
+		eval(mod_pagespeed_P5KXY8$2Zp);
+	</script>
+	<script>
+		eval(mod_pagespeed_IOhwQRo2uN);
+	</script>
+	<script>
+		eval(mod_pagespeed_sRAYNM1lGU);
+	</script>
+	<script>
+		eval(mod_pagespeed_C$3HfHh7_I);
+	</script>
+
+	<script>
+		eval(mod_pagespeed_3kf2SkeKXk);
+	</script>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-23581568-13');
+	</script>
+	<script defer
+		src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
+		integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
+		data-cf-beacon='{"rayId":"6c879ec81af767bc","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.12.0","si":100}'
+		crossorigin="anonymous"></script>
+	<script src="generatetxt.js"></scRipt>
+	<script src="main.js"> </script>
+</body>
+
+</html>
