@@ -1,0 +1,42 @@
+.footer {
+	/* background-color: black; */
+	color: white;
+}
+.subbut {
+	width: 5vw;
+} 
+
+.footerin {
+	padding: 30px;
+	color: white;
+}
+.emailadd {
+	color: white;
+}
+
+.footAlert {
+	margin: 10px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+.smallscreen {
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--navy);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	overflow-y:hidden;
+	z-index: 100;
+}
+.smallscreen h1 {
+	text-align: center;
+	color: white;
+	font-weight: 800;
+	font-size: 5vw;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 50px;
+}

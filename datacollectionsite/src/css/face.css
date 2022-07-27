@@ -1,0 +1,9 @@
+.pids-wrapper{
+	
+  }
+  .pid{
+	width: calc(10% - 10px);
+	height: 10px;
+	display: inline-block;
+	margin: 5px;
+  }

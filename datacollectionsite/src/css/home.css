@@ -1,0 +1,325 @@
+.textgrad {
+  background: linear-gradient(to right, #38bdf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.textgrad2 {
+	background: linear-gradient(to right, var(--green), #F7CB0C);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.green {
+	color: var(--green);
+}
+
+
+p {
+	margin-top: 50px;
+}
+.titlebase {
+	color: white;
+	font-size: clamp(3rem, 5vw, 5rem);
+	text-align: center;
+	line-height: 1;
+	margin: auto;
+	margin-bottom: 20px;
+}
+.titlemajor {
+	color: white;
+	font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 1;
+	text-align: center;
+	margin-top: 20vh;
+}
+
+.subtitle {
+	font-size: clamp(2rem, 3vw, 5rem);
+	text-align: center;
+	color: var(--slate);
+}
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 1000px){
+	.desc {
+		margin-left: 12%;
+		margin-right: 12%;
+	}
+	.list-1 {
+		margin-left: 12%;
+	}
+
+}
+@media (max-width: 1000px){
+	.desc {
+		margin-left: 30px;
+		margin-right: 12px;
+	}
+	.list-1 {
+		margin-left: 15px;
+	}
+}
+
+.lg-desc {
+	font-size: 2rem;
+	text-align: center;
+	color: white;
+	margin-top: 10vh;
+	margin-left: 15vw;
+	margin-right: 15vw;
+	margin-bottom: 30px;
+}
+
+.desc {
+	font-size: 1.25rem;
+	text-align: left;
+	color: white;
+}
+.go-button {
+	
+}
+.landing {
+	min-height: 100vh;
+	background-image: url("https://mcgovern.mit.edu/wp-content/uploads/2019/02/huntington_1920x1080.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.img-cover {
+	background-color: rgba(26, 36, 52, 0.6);
+	min-height: 100vh;
+}
+
+.dividerx {
+	width: 50% !important;
+	height: 5px;
+	border-bottom: 2px solid var(--color-gray);
+	margin:0 auto;
+}
+
+
+/*
+NAVY 2
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 24 39/var(--tw-bg-opacity));
+
+*/
+
+
+.bounce {
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+/* Scroll down indicator (bouncing) */
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px); } }
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0); }
+  40% {
+    -moz-transform: translateY(-30px); }
+  60% {
+    -moz-transform: translateY(-15px); } }
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+    transform: translateY(-15px); } }
+
+.lrn-more {
+	color: #F7CB0C;
+	font-size: 1.3rem;
+	position: absolute;
+	margin-bottom: 2px;
+	
+}
+.lrnmorewrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 10%;
+}
+.begin {
+	margin: auto;
+	font-size: 1.25rem;
+	border-radius: 5px;
+	padding-bottom: 1rem;
+    padding-top: 1rem;
+	padding-left: 2rem;
+    padding-right: 2rem;
+	font-weight: 500;
+	background-color: rgb(255 255 255/1);
+	color: black;
+	margin: 0 auto;
+	box-shadow: 0 5px 15px 5px var(--green);
+	transition: var(--transition);
+	
+}
+.begin:hover {
+	transition: var(--transition);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
+	cursor: pointer;
+
+}
+
+.begin:hover .nxt-icm {
+	margin-left: 10px;
+	transition: all .1s cubic-bezier(0.645,0.045,0.355,1);
+}
+.centerdiv {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.scroll-down {
+	width: 3rem;
+	height: 3rem;
+	margin-top: 2rem;
+	display: flex; 
+	color: #F7CB0C;
+	border-radius: 50%;
+	border: 2px solid #F7CB0C;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+}
+.lrnmoretxt {
+	
+}
+.scroll-down:hover {
+	background-color: #F7CB0C;
+	cursor: pointer;
+}
+
+a {
+	color: inherit; /* blue colors for links too */
+	text-decoration: inherit; /* no underline */
+}
+a:hover {
+	color: inherit; /* blue colors for links too */
+	text-decoration: inherit; /* no underline */
+}
+.scroll-down:hover .scroll-icn {
+	color: black;
+}
+
+.nxt-icm {
+	margin-left: 5px;
+}
+
+.list-1 {
+	text-align: left;
+	color: var(--lightest-slate);
+	font-size: 1.25rem;
+}
+
+.sponsorlogo {
+	object-fit: contain;
+	padding: 1%;
+	background-color: rgba(255,255,255,1);
+	margin: 10px;
+	border-radius: 5%;
+}
+
+@media (max-width: 767px) {
+	.sponsorlogo {
+		width: 40%;
+		height: 10vh;
+	}
+}
+
+@media (min-width: 767px) {
+	.sponsorlogo {
+		width: 40%;
+		height: 10vh;
+	}
+}
+
+.headerspacing {
+	margin-top: 30px;
+}
+
+.accord {
+	margin-top: 30px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.bg-brain {
+	background-image: url('https://mcgovern.mit.edu/wp-content/uploads/2019/02/statsB_brainbow-feichen.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
+
+.img-cover2 {
+	background-color: rgba(10, 25, 47, 0.93)
+	
+}
+.bg-brain2 {
+	background-image: url('https://mcgovern.mit.edu/wp-content/themes/mit-mcgovern-theme/img/light-grey-neuron-pattern.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
+
+.img-cover-3 {
+	background-color: rgba(10, 25, 47, 0.97)
+	
+}
+
+.bg-brain3 {
+	background-image: url('https://mcgovern.mit.edu/wp-content/uploads/2019/02/statsB_Coverslip.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
+.img-cover-4 {
+	background-color: rgba(10, 25, 47, 0.90)
+}
+.passageDiv {
+	margin: 50px 20px 20px 20px;
+	font-size: 1.5rem;
+	background-color: black;
+	color: white;
+	border-radius: 3%;
+	padding: 40px;
+	
+}
+
+.examplEVID {
+	width: 50%;
+	margin: auto;
+	margin-bottom: 0px;
+}
+
+.attr {
+	font-size: .5vw;
+	color: gray;
+	margin-bottom: 0px;
+	padding-bottom: 0;
+	margin-top: 0;
+	padding-top: 0;
+	
+}

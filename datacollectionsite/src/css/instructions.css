@@ -1,0 +1,97 @@
+.requirements {
+	margin-left: 2vw;
+	margin-right: 2vw;
+	margin-top: 2vh;
+	margin-bottom: 5vh;
+	
+	
+	
+}
+
+.boxwrapper {
+	background-color: white;
+	margin: 1vw;
+	border-radius: 2%;
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	height: 100%;
+}
+
+.icon {
+	font-size: 10vw;
+	color: var(--color-blue);
+	margin: 2vh;
+}
+.boxdiv {
+	width: 50%;
+	height: 1px;
+	border: 1px solid var(--color-blue);
+}
+
+.boxdesc {
+	margin-top: 20px;
+	text-align: center;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.titlewrapper {
+	margin-top: 12vh;
+	margin-bottom: 4vh;
+	
+	
+	
+
+}
+.titledashed {
+	color: white;
+	font-size: 5.5rem;
+    line-height: 1;
+	text-align: center;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+.titledashed .h5 {
+	font-size: 1.5rem;
+}
+
+.titledashed {
+	overflow: hidden;
+	text-align: center;
+  }
+  
+  .titledashed:before,
+  .titledashed:after {
+	background-color: white;
+	content: "";
+	display: inline-block;
+	height: 1px;
+	position: relative;
+	vertical-align: middle;
+	width: 50%;
+  }
+  
+  .titledashed:before {
+	right: 0.5em;
+	margin-left: -50%;
+  }
+  
+  .titledashed:after {
+	left: 0.5em;
+	margin-right: -50%;
+  }
+
+  .beginbtn {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	margin-top: 5vh;
+  }
+  .begindesc {
+	text-align: center;
+	color: white;
+	font-size: 2rem;
+  }

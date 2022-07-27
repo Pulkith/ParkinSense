@@ -1,0 +1,132 @@
+.progress3 {
+	margin: 3vh;
+}
+
+.instructiondiv {
+	color: white;
+	padding: 2vh 5vw 5vw 2vh;
+	font-size: 2rem;
+	font-weight: 200;
+	text-align: center;
+	
+}
+.shortdiv {
+	margin-left: 10vw;
+	margin-right: 10vw;
+}
+
+strong {
+	font-weight: 1000 !important;
+}
+
+.facewrapper {
+	width: 50%;
+	margin: auto;
+	display: flex;
+	justify-content: center;	
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+
+}
+.buttonstarts {
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+}
+.buttonselfs {
+	padding: 5vh;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+}
+.buttonitem {
+	margin: 20px !important;
+}
+.timerTime {
+	font-size: 1.5rem;
+	color: white;
+}
+.recordTxt {
+	color: red;
+	transition: var(--transition);
+	animation: blinker 2s linear infinite;
+}
+@keyframes blinker {
+	50% {
+	  opacity: 0;
+	}
+  }
+  .alertWrapper {
+	 
+  }
+  .alertItm {
+	margin-left: 10vw;
+	margin-right: 10vw;
+	margin-top: 30px;
+	margin-bottom: 30px;
+  }
+
+.qWrapper {
+	font-size: 1.5rem !important;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+}
+
+.qQuest {
+	margin-top: 20px;
+}
+.MuiFormControlLabel-label {
+	
+	font-size: 1.5rem !important;
+}
+.qQwrapper {
+	background-color: white;
+	border-radius: 15px;
+	margin: 10px 10px 10px 10px;
+	padding: 20px;
+	width: 100%;
+}
+.noanswer {
+	border: 3px solid red;
+}
+.star {
+	font-size: 1.25rem !important;
+	color: red;
+	margin-left: 10px;
+}
+.reeqTxt {
+	color: red;
+	width: 100%;
+	margin: 10px 5px 5px 5px;
+	font-size: 1rem !important;
+}
+
+.loadingsubmit {
+	font-size: 5rem !important;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.submittingtxt {
+	color: white;
+	font-size: 4vw;
+}
+.submittingtxt2 {
+	color: white;
+	font-size: 2vw;
+}
+
+.centerbutton {
+	margin: auto
+}

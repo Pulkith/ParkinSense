@@ -1,0 +1,35 @@
+.face {
+	width: 100vh;
+}
+.measures {
+	margin: auto;
+	display: flex;
+	justify-content: center;	
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+}
+
+.checkwrapper {
+	background-color: white;
+	margin: 1vw;
+	border-radius: 2%;
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	height: 100%;
+}
+
+.cardoverall {
+	margin-left: 2vw;
+	margin-right: 0px !important;
+	margin-top: 2vh;
+	margin-bottom: 5vh;
+}
+
+.cardtxt {
+	margin: 20px;
+	text-align: center;
+	font-size: 1.25rem;
+}
