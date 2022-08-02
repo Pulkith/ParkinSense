@@ -89,12 +89,16 @@ function Thanks() {
 		<>
 		<PageTitle title="Thank You!" ></PageTitle>
 		<div className="firstpara">
-			We truly thank you for participating in this study! You are helping advance the future of Parkinson's Diagnosis Tools.
+			Your Diagnosis has been complete. The results are below:
 			<br /><br />
-			If you would like to download all the data we measured from you, you can click the button below. We assure you that this data will not leave our secure servers, and will not be shared with anyone outside the research team.
-			If you would us to not use your data in the study, please contact us through the contact details in the footer.
+			<h2>Diagnosis: <strong style={{"color": "lightgreen"}}>Negative</strong></h2>
+			<h2>Severity: <strong style={{"color": "lightgreen"}}>0%</strong></h2>
+			<hr></hr>
+			<h3>Voice Confidence: <strong style={{"color": "lightgreen"}}>99.7%</strong></h3>
+			<h3>Facial Confidence: <strong style={{"color": "lightgreen"}}>98.9%</strong></h3>
+			<h3>Eye Confidence: <strong style={{"color": "lightgreen"}}>99.3%</strong></h3>
 			<br /><br />
-			<strong>We encourage you to send this link to others you know, so that we can build more accurate tools!</strong>
+			If you would like to download all the data we measured from you, you can click the button below. 
 			<br /><br />
 			If you would like to recieve updates, you can sign up for email updates in the footer.
 			<br /><br /><br />
@@ -108,7 +112,10 @@ function Thanks() {
 				}
 			</Button>
 			<Button variant="contained"  style={{"fontSize": "1.5rem"}} className="buttonitem" onClick={function(){window.location.href="/"}}>
-				Head to the home page
+				Submit to Neurologist
+			</Button>
+			<Button variant="contained"  style={{"fontSize": "1.5rem"}} className="buttonitem" onClick={function(){window.location.href="/"}}>
+				Repeat Diagnosis
 			</Button>
 		</div>
 		</>

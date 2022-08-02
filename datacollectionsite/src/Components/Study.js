@@ -87,7 +87,7 @@ export default class Study extends React.Component{
 		this.recorderData = []
 		this.timerInterval = null
 		this.recorderCancelled = false;
-		this.maxSpeechTime = 60;
+		this.maxSpeechTime = 5;
 		this.timeOutTime = 120000;
 	}
 
