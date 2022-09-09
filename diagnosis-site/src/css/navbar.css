@@ -1,0 +1,221 @@
+.navbarwrapper {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+
+    /* box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8),
+      -12px 0 8px -4px rgba(31, 73, 125, 0.8);
+    box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white,
+      12px 0 15px -4px rgba(31, 73, 125, 0.8),
+      -12px 0 15px -4px rgba(31, 73, 125, 0.8); */
+      box-shadow: 0 10px 30px -10px rgb(42, 42, 42);
+      --headback: rgb(26, 26, 26);
+}
+
+.navbarwrapper .dropdownitemlink {
+  width: 100%;
+  height: 100%;
+}
+
+.navbarspacer {
+  height: 75px;
+}
+
+.navbarwrapper a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbarwrapper .shownwrapper {
+  display: flex;
+  height: 75px;
+  background-color: var(--headback);
+}
+
+.navbarwrapper .linkwrapper {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* height: 100px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  
+  /* padding-top: 0rem; */
+  /* margin-top: 0px; */
+  /* overflow: hidden; */
+
+  
+  /* margin: auto; */
+  /* top: 0; */
+  /* opacity: 0.9; */
+  background-color: var(--headback);
+  
+  
+}
+.navbarwrapper .headeritem {
+  color: white;
+  margin-left: 30px;
+  margin-left: 30px;
+  font-size: 1.245rem;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+}
+
+.navbarwrapper .headeritem .navlink {
+  color: white;
+  
+  
+}
+
+
+
+
+@keyframes borderexpand {
+  from {
+    border-width: 0px 0px 0px 0px;
+  }
+  to {
+    border-width: 0px 0px 3px 0px;
+  }
+}
+
+.navbarwrapper .logowrapper {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  margin-right: 0px;
+  cursor: pointer;
+}
+
+.navbarwrapper .logo {
+  height: 100%;
+}
+
+.navbarwrapper .logowrapperhidden {
+  /* visibility: hidden; */
+}
+
+.hamburgerwrapper {
+  
+  display: none;
+  align-items: center;
+  width: 100%;
+}
+.navbarwrapper .hamburgerwrapper .hamburger {
+  margin-left: auto;
+  margin-right: 20px;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  transition: all .15s ease-in-out;
+}
+
+
+.navbarwrapper .dropdownwrapper {
+  /* height: 100px; */
+  /* width: 100vw; */
+  background-color: var(--headback);
+  /* display: none; */
+  left: 0px;
+  right: 0px;
+  position: absolute;
+  /* display: inline-block; */
+  display: flex;
+  justify-content: center;
+  padding-top: 45px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  /* display: none; */
+  visibility: hidden;
+  z-index: 2000;
+}
+
+.navbarwrapper .headeritem:hover .navlink {
+  color: #9c9c9c;
+  
+}
+
+.navbarwrapper #aboutusdropdown {
+  /* position: relative; */
+  box-shadow: 0 10px 30px -10px rgb(42, 42, 42);
+}
+
+.navbarwrapper #aboutusdropdown:hover .dropdownwrapper {
+  animation: dropdownshow .25s;
+  visibility: visible;
+}
+.navbarwrapper #researchdropdown:hover .dropdownwrapper {
+  animation: dropdownshow .25s;
+  visibility: visible;
+}
+.navbarwrapper #solutionswrapper:hover .dropdownwrapper {
+  animation: dropdownshow .25s;
+  visibility: visible;
+}
+
+.navbarwrapper .shownwrapper .dropdownitem {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  border-left: 1px solid rgb(57, 57, 57);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbarwrapper .shownwrapper .dropdownitem:hover {
+  background-color: rgba(30, 30, 30, 0.967);
+  cursor: pointer;
+}
+
+
+@keyframes dropdownshow {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes dropdownhide {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+}
+
+/* 
+.shownwrapper .headeritem:hover .dropdownwrapper {
+  display: block;
+} */
+
+@media (max-width: 1125px) {
+  .navbarwrapper .linkwrapper {
+    display: none;
+  }
+  .navbarwrapper .logowrapper {
+    margin-left: 10%;
+  }
+  .navbarwrapper .hamburgerwrapper {
+    display: flex;
+    margin-right: 10%;
+  }
+}
