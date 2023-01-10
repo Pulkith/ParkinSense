@@ -155,7 +155,7 @@ const Pub = (props) => {
 
 			<div className="row">
 
-				<div className="col-10">
+				<div className="col-12 col-md-10">
 					<h2 className="subheading1">{props.data.title}</h2>
 					<div className='paraReg thintext tag color2'>{props.data.team} </div>
 					<p className="subheading2" style={{marginTop: "15px"}}> Job Description: <br />{props.data.desc}
@@ -175,9 +175,10 @@ const Pub = (props) => {
 					<div className="paraReg thintext slate">{props.data.authors}</div>
 					<div className='paraReg thintext slate'>{props.data.date}</div> */}
 				</div>
-
-				<div className="col-2">
-					<GradButton text="Apply Now" link={`mailto:paruchuri@pulkith.com?subject=Neurose Application - ${props.data.title}&body=Please attach your resume, and a short description of why you believe you would be a great fit.`} />
+				<div className="col-12 col-md-2 d-flex justify-content-center">
+					<div>
+						<GradButton text="Apply Now" link={`mailto:paruchuri@pulkith.com?subject=Neurose Application - ${props.data.title}&body=Please attach your resume, and a short description of why you believe you would be a great fit.`} />
+					</div>
 				</div>
 			</div>
 			

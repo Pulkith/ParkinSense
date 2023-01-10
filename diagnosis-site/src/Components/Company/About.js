@@ -63,7 +63,7 @@ const About = (props) => {
 					We have open positions in Leadership, Research, App Development, Machine Learning, Graphic Design, Enterprise Operations, and more!	
 				</p>
 				<br />
-				<GradButton text="Let's Work Together" link="Join"/>
+				<GradButton text="Let's Work Together" link="/Join"/>
 			</div>
 		</div>
 
@@ -79,7 +79,7 @@ const About = (props) => {
 					<br /><br />
 					Today Neurose is working on various projects, some of which are in the later stages and nearing release, and some that are just getting started. 
 					<br /><br />
-					<GradButton text="Read our latest News" />
+					<GradButton link="/News" text="Read our latest News" />
 				</p>
 			</div>
 		</div>
@@ -94,15 +94,15 @@ const About = (props) => {
 							<br /><br />
 
 						</div>
-						<GradButton text="View our Ongoing Projects" />
+						<GradButton link="/Projects" text="View our Ongoing Projects" />
 					</div>
 					<div className="col-6" style={{marginBottom: "100px"}}>
 						<div className="maxsizeimgwrapper">
-							<img className="maxsizeimg" src={require('../../assets/about/research.png')} alt="research" />
+							<img className="" src={require('../../assets/about/research.png')} alt="research" style={{height: "100%", width: "100%", objectFit: "contain"}}/>
 						</div>
 					</div>
 					<div className="col-6" style={{marginBottom: "100px"}}>
-					<img className="maxsizeimg" src={require('../../assets/about/leadership.jpeg')} alt="leadership" />
+					<img className="" src={require('../../assets/about/leadership.jpeg')} alt="leadership" style={{height: "100%", width: "100%", objectFit: "contain"}}/>
 					</div>
 					<div className="col-6 leftrightmargin padleft">
 						<div className="headinggrad">Experienced</div>
@@ -114,7 +114,7 @@ const About = (props) => {
 							<br /><br />
 							
 						</div>
-						<GradButton text="View our Team" />
+						<GradButton link="/Team" text="View our Team" />
 					</div>
 
 					<div className="col-6 padright">
@@ -131,11 +131,11 @@ const About = (props) => {
 								<br /><br />
 								
 							</div>
-							<GradButton text="View our Partners" />
-							<GradButton text="View our Recognition" />
+							<GradButton link="/Partners" text="View our Partners" />
+							<GradButton link="/Recognition" text="View our Recognition" />
 					</div>
 					<div className="col-6" style={{marginBottom: "100px"}}>
-					<img className="maxsizeimg" src={require('../../assets/about/winning.png')} alt="partners" />
+					<img className="" src={require('../../assets/about/winning.png')} alt="partners" style={{height: "100%", width: "100%", objectFit: "contain"}}/>
 					</div>
 				</div>
 			</div>

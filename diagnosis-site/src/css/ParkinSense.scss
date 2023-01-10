@@ -6,6 +6,17 @@
 	overflow: hidden;
 	display: inline-block;
 	
+	.bannerword {
+		font-size: 3.5rem;
+	}
+
+	@media(max-width: 715px) {
+		.bannerword {
+			font-size: clamp(7vw, 7vw, 3.5rem);
+		}
+	}
+
+
 	ul {
 	  padding: 0;
 	  animation: scrollUp 25s infinite;
@@ -19,6 +30,8 @@
 	  }
 	}
   }
+
+  
   
   // Variables
   $item-count: 6;
@@ -189,6 +202,4 @@
 // 		opacity: 0;
 // 	}
 // }
-
-
 

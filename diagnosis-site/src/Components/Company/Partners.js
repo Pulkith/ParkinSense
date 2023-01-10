@@ -11,8 +11,8 @@ const Partners = (props) => {
 	let colleges = []
 	for(var i = 0; i < collegenames.length; ++i) {
 		colleges.push(
-			<div className="collegeimages col-4">
-				<a href={links[i]} target="_black">
+			<div className="col-12 col-md-6">
+				<a href={links[i]} target="_black" className="collegeimages ">
 					<img src={require(`../../assets/colleges/${collegenames[i]}`)} className="collegeimg"></img>	
 				</a>
 			</div>
@@ -22,7 +22,7 @@ const Partners = (props) => {
   return (
 	
     <div className="partners" style={{width: "100%"}}>
-		<PageHeader title="Partners & Recognition" subtitle="Our Partners, News Recogniction, and awards." />
+		<PageHeader title="Partners & Recognition" subtitle="Our Partners, News Recognition, and awards." />
 		<div className="sec1">
 			<div className='regwrapper'>
 				<h2 className="headinggrad">Supported by World Class Institutions</h2>
@@ -30,8 +30,8 @@ const Partners = (props) => {
 				<br />
 				<h3 className="subheading">Direct Partners</h3>
 				<br></br>
-				<div className="collegeimages col-4">
-					<a href="https://medicine.stanford.edu/" target="_black">
+				<div className="col-12 col-md-6">
+					<a href="https://medicine.stanford.edu/" target="_black" className="collegeimages">
 						<img src={require(`../../assets/colleges/Stanford.png`)} className="collegeimg"></img>		
 					</a>
 				</div>

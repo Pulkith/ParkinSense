@@ -27,6 +27,8 @@ body {
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 }
 
 .sec1 {
@@ -59,7 +61,7 @@ body {
 	-webkit-background-clip: text;
 	background-clip: text;
     -webkit-text-fill-color: transparent;
-	display: inline-block;
+	display: inline;
 }
 
 .centertxt {
@@ -176,7 +178,7 @@ body {
 	}
 	
 	.headingSmall {
-		
+		font-size: 2rem;
 	}
 	
 	.subheadingLarger {
@@ -193,7 +195,7 @@ body {
 	
 	
 	.subheading1 {
-		
+		font-size: 1.125rem;
 	}
 	
 	.subheading {
@@ -202,7 +204,7 @@ body {
 	}
 	
 	.subheading2 {
-		
+		font-size: 1rem;
 	}
 	.subheading2W {
 		
@@ -212,10 +214,13 @@ body {
 	}
 	
 	.subheading4 {
-		
+		font-size: 1.125rem;
 	}
 	.subheading3 {
 		font-size: 1rem;
+	}
+	.headinggrad {
+		font-size: .875rem !important;
 	}
 
 }

@@ -31,7 +31,7 @@ const ViewArticle = (props) => {
 					<div className="overlay">
 						<div className="titlecontainer newsregwrapper">
 							<div className="row">
-								<div className="col-10">
+								<div className="col-md-10 col-12">
 									<div className="category headinggrad">{data.topic}</div>
 									<div className="headingSmall title">{data.title}</div>
 									<div className="subheading1 date newsheadertopmargin">{data.date}</div>
@@ -45,10 +45,10 @@ const ViewArticle = (props) => {
 					<div className="centerwrappercontainer">
 						<div className="newsregwrapper">
 							<div className="row padding">
-								<div className="content col-10 padright">
+								<div className="content col-md-10 col-12 padright">
 									{data.content}
 								</div>
-								<div className="sidebar col-2">
+								<div className="sidebar col-md-2 col-12">
 									<div className="subheading3">Category</div>
 									<div className="category headinggrad">{data.topic}</div>
 									<br/><br/>

@@ -17,14 +17,15 @@ const Team = () => {
 
 
   
+	mad.push(<StaffPerson name="Amoolya Tadepalli" title="VP of MAD CAP and Sugondese Department Head" />)
 	mad.push(<StaffPerson name="Shreyas Pattabi" title="Development Lead, App Developer" />)
+	mad.push(<StaffPerson name="Chloe Lee" title="Emotional Support" />)
 	mad.push(<StaffPerson name="Vamsi Putti" title="App Developer" />)
-	mad.push(<StaffPerson name="Akshar Chundri" title="App Developer" />)
+	mad.push(<StaffPerson name="Akshar Chunduri" title="App Developer" />)
 
 	eo.push(<StaffPerson name="Rithik Duvva" title="Finance Lead" />);
 	eo.push(<StaffPerson name="Prayag Peram" title="Outreach Lead" />)
-	eo.push(<StaffPerson name="Eshaan Shrivasta" title="Finance" />)
-  
+	eo.push(<StaffPerson name="Eshaan Shrivastava" title="Finance" />)
 
 
   return (

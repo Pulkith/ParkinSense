@@ -51,7 +51,7 @@ const ArticleTabularView = (props) => {
 
 
 	return(
-		<div className="col-4 newstabularwraptop">
+		<div className="col-lg-4 col-md-6 col-12 newstabularwraptop">
 			<a href={`/News/${props.article.urlslug}`}>
 				<div className="newstabularwrapper">
 					<div className="innerwrapper">

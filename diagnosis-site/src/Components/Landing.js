@@ -241,7 +241,7 @@ const Landing = () => {
 				{news}
 			</div>	
 			<div style={{"text-align": "center"}}>
-				<VisitBtn text="Read all News"></VisitBtn>
+				<VisitBtn link="/News" text="Read all News"></VisitBtn>
 			</div>
 		</div>
 
@@ -256,7 +256,7 @@ const Landing = () => {
 				</div>
 			</div>
 			<div className="centertxt">
-				<VisitBtn text="See Organization and Staff"></VisitBtn>
+				<VisitBtn link="/Team" text="See Organization and Staff"></VisitBtn>
 			</div>
 		</div>
 

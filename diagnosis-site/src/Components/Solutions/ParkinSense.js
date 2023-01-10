@@ -35,12 +35,12 @@ export default function ParkinSense() {
 				<h2 className="headingSmall">
         <div className="wordchangewrapper">
           <ul className=" wordchange">
-              <li className="txt1 headingSmall"><span className="gradtext">Faster </span>&nbsp;Parkinson's Disease Diagnosis</li>
-              <li className="txt2 headingSmall"><span className="gradtext">Cheaper </span>&nbsp;Parkinson's Disease Diagnosis</li>
-              <li className="txt3 headingSmall"><span className="gradtext">More Accurate </span>&nbsp;Parkinson's Disease Diagnosis</li>
-              <li className="txt4 headingSmall"><span className="gradtext">More Effecient </span>&nbsp;Parkinson's Disease Diagnosis</li>
-              <li className="txt5 headingSmall"><span className="gradtext">More Accessible </span>&nbsp;Parkinson's Disease Diagnosis</li>
-              <li className="txt1 headingSmall"><span className="gradtext">Faster </span>&nbsp;Parkinson's Disease Diagnosis</li>
+              <li className="txt1 headingSmall bannerword"><span className="gradtext">Faster </span>&nbsp;Diagnosis</li>
+              <li className="txt2 headingSmall bannerword"><span className="gradtext">Cheaper </span>&nbsp;Diagnosis</li>
+              <li className="txt3 headingSmall bannerword"><span className="gradtext">More Accurate </span>&nbsp;Diagnosis</li>
+              <li className="txt4 headingSmall bannerword"><span className="gradtext">More Effecient </span>&nbsp;Diagnosis</li>
+              <li className="txt5 headingSmall bannerword"><span className="gradtext">More Accessible </span>&nbsp;Diagnosis</li>
+              <li className="txt1 headingSmall bannerword"><span className="gradtext">Faster </span>&nbsp;Diagnosis</li>
           </ul> 
         </div>
       </h2>
@@ -139,15 +139,15 @@ export default function ParkinSense() {
           <div className="headingSmall">Read, Diagnose, Assess</div>
           <br /> <br />
           <div className="row">
-            <div className="col-4">
+            <div className="col-6 col-md-4" style={{marginBottom: "20px"}}>
               <div className="subheading1">1. Read</div>
               <div className="subheading3 textgray">Read a short passage for 2 minutes while your facial and vocal attributes are analyzed. All collected data is discared instantly after being analyzed to protect your privacy.</div>
             </div>
-            <div className="col-4">
+            <div className="col-6 col-md-4">
               <div className="subheading1">2. Diagnose</div>
               <div className="subheading3 textgray">Get diagnosed within 60 seconds of finishing your passage. You can download the report specifics to present to your neurologist if you wish to.</div>
             </div>
-            <div className="col-4">
+            <div className="col-6 col-md-4" >
               <div className="subheading1">3. Assess</div>
               <div className="subheading3 textgray">If you test positive for Parknson's Disease, you can purchase our subscription plan, to view the severity classification, and track the progression of your severity over time.</div>
             </div>
@@ -161,50 +161,50 @@ export default function ParkinSense() {
           <br /> <br />
 
           <div className="row">
-            <div className="col-4">
+            <div className="col-6 col-md-4">
               <div className="fa fa-toolbox gradtext" style={{fontSize: "2rem"}} ></div>
               <div className="subheading4">Developed</div>
-              <br />
+              <div className="topbottombreakersmall"></div>
               <div className="subheading2">Developed by experienced researchers and developers from across the nation, with expertise in Machine Learning, Research, Mobile Development, and more.</div>
               <br />
               <br />
             </div>
-            <div className="col-4">
+            <div className="col-6 col-md-4">
               <div className="fa fa-vials gradtext" style={{fontSize: "2rem"}} ></div>
               <div className="subheading4">Tested</div>
-              <br />
+              <div className="topbottombreakersmall"></div>
               <div className="subheading2">Tested on millions of data points from hundreds of thousands of patients collected from various institutions over the last few deacades.</div>
               <br />
               <br />
             </div>
-            <div className="col-4">
+            <div className="col-6 col-md-4">
               <div className="fa fa-microscope gradtext" style={{fontSize: "2rem"}} ></div>
               <div className="subheading4">Proven</div>
-              <br />
+              <div className="topbottombreakersmall"></div>
               <div className="subheading2">Proven to be effective in interregional clinical tests, when tested on hundreds of patients.</div>
               <br />
               <br />
             </div>
-            <div className="col-4">
+            <div className="col-6 col-md-4">
               <div className="fa fa-user gradtext" style={{fontSize: "2rem"}} ></div>
               <div className="subheading4">Supported</div>
-              <br />
+              <div className="topbottombreakersmall"></div>
               <div className="subheading2">Supported by world class institutions and acclaimed faculty leading the charge on research for Parkinson's Disease and Healthcare Research.</div>
                <br />
               <br />
             </div>
-            <div className="col-4">
+            <div className="col-6 col-md-4">
               <div className="fa fa-newspaper gradtext" style={{fontSize: "2rem"}} ></div>
               <div className="subheading4">Featured</div>
-              <br />
+              <div className="topbottombreakersmall"></div>
               <div className="subheading2">Featured by numerous international news agencies as a promising application for the diagnosis of Parkinson's Disease.</div>
               <br />
               <br />
             </div>
-            <div className="col-4">
+            <div className="col-6 col-md-4">
               <div className="fa fa-medal gradtext" style={{fontSize: "2rem"}} ></div>
               <div className="subheading4">Awarded</div>
-              <br />
+              <div className="topbottombreakersmall"></div>
               <div className="subheading2">ParkinSense has won multiple awards, from over ten thousand competitors, for both its effectiveness and its promise.</div>
               <br />
               <br />

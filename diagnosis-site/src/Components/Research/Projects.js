@@ -68,7 +68,7 @@ const Projects = (props) => {
 
 const ProjectItem = (props) => {
   return(
-    <div className="project col-6">
+    <div className="project col-12 col-md-6">
       <div className="projectwrapper">
         <div className="imgwrapper">
           <img className="img" src={require(`../../assets/projects/${props.image}`)}></img>

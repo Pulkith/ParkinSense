@@ -22,25 +22,27 @@ const Main = () => {
   return (
 	<div className="App">
 			<Header />
-			<Routes >
-				<Route exact path='/' element={<Landing/>} ></Route>
-				<Route exact path='/Landing' element={<Landing/>}></Route>
-				<Route exact path='/solutions/parkinsense' element={<ParkinSense/>}></Route>
-				<Route exact path='/solutions/parkend' element={<ParkEnd/>}></Route>
-				<Route exact path='/Landing' element={<Landing/>}></Route>
-				<Route exact path='/Team' element={<Team/>}></Route>
-				<Route exact path='/Publications' element={<Publications/>}></Route>
-				<Route exact path='/NJAN' element={<NJAN/>}></Route>
-				<Route exact path='/Partners' element={<Partners/>}></Route>\
-				<Route exact path='/Contact' element={<Contact/>}></Route>
-				<Route exact path='/Join' element={<Join/>}></Route>
-				<Route exact path='/Recognition' element={<Recognition/>}></Route>
-				<Route exact path='/About' element={<About/>}></Route>
-				<Route exact path='/Projects' element={<Projects/>}></Route>
-				<Route exact path='/News' element={<NewsView/>}></Route>
-				<Route exact path='/News/:id' element={<ViewArticle/>}></Route>
-				<Route path="*" element={<NotFound/>} />
-			</Routes>
+			<div style={{minHeight: "calc(100vh - 130px)"}}>
+				<Routes >
+					<Route exact path='/' element={<Landing/>} ></Route>
+					<Route exact path='/Landing' element={<Landing/>}></Route>
+					<Route exact path='/solutions/parkinsense' element={<ParkinSense/>}></Route>
+					<Route exact path='/solutions/parkend' element={<ParkEnd/>}></Route>
+					<Route exact path='/Landing' element={<Landing/>}></Route>
+					<Route exact path='/Team' element={<Team/>}></Route>
+					<Route exact path='/Publications' element={<Publications/>}></Route>
+					<Route exact path='/NJAN' element={<NJAN/>}></Route>
+					<Route exact path='/Partners' element={<Partners/>}></Route>\
+					<Route exact path='/Contact' element={<Contact/>}></Route>
+					<Route exact path='/Join' element={<Join/>}></Route>
+					<Route exact path='/Recognition' element={<Recognition/>}></Route>
+					<Route exact path='/About' element={<About/>}></Route>
+					<Route exact path='/Projects' element={<Projects/>}></Route>
+					<Route exact path='/News' element={<NewsView/>}></Route>
+					<Route exact path='/News/:id' element={<ViewArticle/>}></Route>
+					<Route path="*" element={<NotFound/>} />
+				</Routes>
+			</div>
 			<Footer></Footer>
 	</div>
   );

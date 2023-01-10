@@ -59,11 +59,11 @@ const Pub = (props) => {
 		<div className="pub">
 
 			<div className="row">
-				<div className="col-2 imgwrapper">
+				<div className="col-md-2 col-12 order-3 order-md-1 imgwrapper">
 					<img src={require(`../../assets/paper/${props.data.image}`)} className="paperimg"></img>
 				</div>
 
-				<div className="col-8">
+				<div className="col-md-8 col-12 order-1 order-md-2">
 					<h2 className="paraLarge">{props.data.title}</h2>
 					{
 						props.data.type === 'Publication' ? <div className='paraReg thintext tag color1 '>{props.data.type} </div> :
@@ -74,8 +74,11 @@ const Pub = (props) => {
 					<div className='paraReg thintext slate'>{props.data.date}</div>
 				</div>
 
-				<div className="col-2">
-					{ props.data.link.length > 0 && <GradButton text="View Publication" link={props.data.link} ex="True" /> }
+				<div className="col-md-2 col-12 order-2 order-md-3 d-flex justify-content-center">
+					<div>
+						{ props.data.link.length > 0 && <GradButton text="View Publication" link={props.data.link} ex="True" /> }
+					</div>
+					
 				</div>
 			</div>
 			
