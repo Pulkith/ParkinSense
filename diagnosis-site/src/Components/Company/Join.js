@@ -175,7 +175,6 @@ const Pub = (props) => {
 					<div className="paraReg thintext slate">{props.data.authors}</div>
 					<div className='paraReg thintext slate'>{props.data.date}</div> */}
 				</div>
-
 				<div className="col-12 col-md-2 d-flex justify-content-center">
 					<div>
 						<GradButton text="Apply Now" link={`mailto:paruchuri@pulkith.com?subject=Neurose Application - ${props.data.title}&body=Please attach your resume, and a short description of why you believe you would be a great fit.`} />

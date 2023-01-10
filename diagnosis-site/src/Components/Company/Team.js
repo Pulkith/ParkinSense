@@ -26,7 +26,6 @@ const Team = () => {
 	eo.push(<StaffPerson name="Rithik Duvva" title="Finance Lead" />);
 	eo.push(<StaffPerson name="Prayag Peram" title="Outreach Lead" />)
 	eo.push(<StaffPerson name="Eshaan Shrivastava" title="Finance" />)
-  
 
 
   return (
