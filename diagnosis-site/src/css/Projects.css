@@ -1,0 +1,41 @@
+.project {
+	margin-bottom: 50px;
+}
+
+.project .projectwrapper{
+	background-color: var(--frost-black);
+	height: 100%;
+	border-radius: 1.5rem;
+	transition: all 0.3s ease-in-out;
+}
+
+.project .projectwrapper .contentwrapper {
+	padding: 30px;
+}
+
+.project .projectwrapper:hover {
+	cursor: pointer;
+	transform: translateY(-12px);
+	transition: all 0.3s ease-in-out;
+}
+
+.project .desc {
+	margin-top: 30px;
+}
+
+
+.project .imgwrapper {
+	height: 400px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.project .imgwrapper .img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 1.5rem 1.5rem 0 0;
+}

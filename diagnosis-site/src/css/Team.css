@@ -1,0 +1,130 @@
+.team .heading {
+	font-weight: 700;
+    font-size: 56px;
+    line-height: 105%;
+	letter-spacing: -1px;
+	font-family: Helvetica,Arial,sans-serif;
+}
+
+.team {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	font-family: Inter,system-ui,-apple-system,Arial,sans-serif;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.team .subsubheading {
+	font-weight: 700;
+    font-size: 25px;
+	line-height: 1.3em;
+	letter-spacing: -.5px;
+	font-family: Helvetica,Arial,sans-serif;
+	color: white;
+}
+
+.team .subheading {
+	font-weight: 700;
+    font-size: 45px;
+    line-height: 105%;
+	letter-spacing: -1px;
+	font-family: Helvetica,Arial,sans-serif;
+}
+
+
+.team .leftwrap {
+	width: 70%;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 100px;
+}
+
+.team .wrapper {
+	width: 90%;
+	margin: auto;
+}
+
+.staffperson {
+	background-color: rgb(23 23 23);
+	border-radius: .5rem;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: inline-block;
+	width: 225px;
+	padding: 0px;
+	margin-top: 30px;
+}
+
+.staffperson .img {
+	height: 250px;
+	background-color: white;
+	border-radius: 1rem 1rem 0px 0px;
+}
+
+.staffperson .content {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 25px;
+	padding-top: 20px;
+	background-color: rgb(23 23 23);
+	transition: all .15s ease-in-out;
+	border-radius: 0px 0px 1rem 1rem;
+	height: 130px;
+	position: relative;
+	
+}
+
+.staffperson:hover .content {
+	margin-top: -150px;
+	height: 250px;
+	transition: all .15s ease-in-out;
+}
+.staffperson:hover .contactbtn {
+	opacity: 1;
+	transition: all .3s ease-in-out;
+}
+
+
+
+.staffperson .content .name {
+	font-size: 1.25rem;
+    line-height: 1.65;
+	font-weight: 800;
+	color: white;
+	webkit-font-smoothing: antialiased;
+	
+}
+
+.staffperson .content .title {
+	font-size: 1rem;
+    line-height: 1.5;
+	color: white;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.staffperson:hover .content .title {
+	-webkit-line-clamp: 15;
+	line-clamp: 15;
+	transition: all .15s ease-in-out;
+}
+
+.team .department {
+	margin-bottom: 50px;
+}
+.team .emailwrapper {
+	display: flex;
+	justify-content: center;
+}
+.team .contactbtn {
+	background-color: white;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	width: 150px;
+	font-size: .825rem;
+	opacity: 0;
+}
+

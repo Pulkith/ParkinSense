@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width">
+    <title>18th Birthday</title>
+
+    <link rel="stylesheet" href="./flip/flip.min.css">
+
+</head>
+<body>
+
+<!-- START OF FLIP EXAMPLE PRESET -->
+
+<style>
+    .tickparent {
+        width: 100vw;    
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .tick {
+        padding-bottom: 1em;
+        font-size:5rem;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    }
+    
+    .tick-label {
+        font-size:.375em;
+        text-align:center;
+        color: white;
+        font-weight: bold;
+    }
+
+    .tick-group {
+        margin:0 .25em;
+        text-align:center;
+    }
+    .ticktitle {
+        color: white;
+        font-weight: bold;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        font-size: 3rem;
+
+    }
+    .ticktitl2 {
+        color: white;
+        font-weight: bold;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        font-size: 1rem;
+        margin-top: -70px;
+        margin-bottom: 50px;
+        font-style: italic;
+
+    }
+    body {
+        background-color: black;
+    }
+    .countimage {
+        height: 250px;
+    }
+</style>
+
+<div class="tickparent">
+    <div class="ticktitle" id="tt1">
+        <h1>Pulkith's 18th Birthday</h1>
+    </div>
+    <div class="ticktitl2" id="tt2">
+        <h1>Developed Using Advanced Machine Learning</h1>
+    </div>
+    <div class="tick"
+        data-did-init="handleTickInit" id="tick">
+
+        <div data-repeat="true"
+            data-layout="horizontal center fit"
+            data-transform="preset(d, h, m, s) -> delay">
+
+            <div class="tick-group">
+
+                <div data-key="value"
+                    data-repeat="true"
+                    data-transform="pad(00) -> split -> delay">
+
+                    <span data-view="flip"></span>
+
+                </div>
+
+                <span data-key="label"
+                    data-view="text"
+                    class="tick-label"></span>
+
+            </div>
+
+        </div>
+
+    </div>
+    <img id="countimage" class="countimage">
+    <img id="countimage1" src="count/final.webp" style="display: none; width: 100%;">
+    
+    <!-- <audio id="player" autoplay controls><source src="count/audio.mp3" type="audio/mp3"></audio> -->
+</div>
+<script src="main.js"></script>
+<script>
+    // getTime()
+   
+    
+
+	function handleTickInit(tick) {
+
+
+        var nextYear = new Date('December 6, 2022 05:00:00');
+        
+		Tick.count.down(nextYear + '-01-01').onupdate = function(value) {
+			tick.value = value;
+            console.log(value)
+            if(value[0] == 0 && value[1] == 0 && value[2] == 0 && value[3] == 0) {
+                getTime()
+            }
+            if(value[0] == 0 && value[1] == 0 && value[2] == 0 && value[3] <= 9) {
+                document.getElementById('tick').style.display = 'none'
+                if(value[3] < 0 ) value[3] =0;
+                document.getElementById("countimage").src = 'count/' + value[3] + '.png'
+            }
+        };
+
+	}
+</script>
+
+<!-- END OF FLIP EXAMPLE PRESET -->
+
+<script src="./flip/flip.min.js"></script>
+
+
+</body>
+</html>
